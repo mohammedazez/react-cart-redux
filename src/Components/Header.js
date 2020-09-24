@@ -1,7 +1,11 @@
 import React from "react";
 import "./Header.css";
+// Import hooks redux
+import { useSelector } from "react-redux";
 
 function Header() {
+  const selector = useSelector((state) => state.cart);
+  const total = useSelector((state) => state.totalBelanja);
   return (
     <div>
       <img
@@ -9,6 +13,8 @@ function Header() {
         alt="cart"
         className="picture"
       />
+      {selector}
+      <p>{total}</p>
     </div>
   );
 }

@@ -1,8 +1,9 @@
 // Import Action
-import { INCREMENT, DECREMENT } from "../action/cart.action";
+import { INCREMENT, DECREMENT, TOTALHARGA } from "../action/cart.action";
 
 const initialState = {
   cart: 0,
+  totalBelanja: 0,
 };
 
 const cart = (state = initialState, action) => {
@@ -11,11 +12,18 @@ const cart = (state = initialState, action) => {
       return {
         ...state,
         cart: state.cart + 1,
+        totalBelanja: state.totalBelanja + action.item.price,
       };
     case DECREMENT:
       return {
         ...state,
         cart: state.cart - 1,
+        totalBelanja: state.totalBelanja - action.item.price,
+      };
+    case TOTALHARGA:
+      return {
+        ...state,
+        totalBelanja: state.totalBelanja + action.item.price,
       };
     default:
       return state;
