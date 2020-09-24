@@ -1,16 +1,16 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
+import React from "react";
+import "./Header.css";
 
-export const Header = () => {
+function Header() {
   return (
     <div>
-      <h1>Halo semuanya</h1>
+      <img
+        src="https://pngimg.com/uploads/shopping_cart/shopping_cart_PNG42.png"
+        alt="cart"
+        className="picture"
+      />
     </div>
   );
-};
+}
 
-const mapStateToProps = (state) => ({});
-
-const mapDispatchToProps = {};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default Header;
