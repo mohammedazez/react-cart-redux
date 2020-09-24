@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 function Cart() {
   const product = [
     {
-      name: "product 1",
+      name: "Bakso",
       price: 25000,
     },
   ];
