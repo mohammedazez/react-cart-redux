@@ -6,7 +6,7 @@ import App from "./App";
 // Bungkus App js dengan Provider
 import { Provider } from "react-redux";
 // Import Store
-import store from "./Redux/store/store";
+import store from "./Redux/Store/store";
 
 ReactDOM.render(
   <Provider store={store}>
