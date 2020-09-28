@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // Import Components
 import Header from "./Components/Header";
 import MovieNowPlaying from "./Components/MovieNowPlaying";
@@ -11,17 +11,15 @@ function App() {
   return (
     <Router>
       <div>
+        <Header />
         <Switch>
-          <Route>
-            <Header />
-          </Route>
-          <Route>
+          <Route exact path="/">
             <Home />
           </Route>
-          <Route>
+          <Route path="/upcoming">
             <MovieNowPlaying />
           </Route>
-          <Route>
+          <Route path="/nowplaying">
             <Upcoming />
           </Route>
         </Switch>
