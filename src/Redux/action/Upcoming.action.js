@@ -6,7 +6,6 @@ export const GET_UPCOMING_MOVIE = "GET_UPCOMING_MOVIE";
 
 // function untuk constanta
 const getUpcoming = (data) => {
-  console.log(getUpcoming);
   return {
     type: GET_UPCOMING_MOVIE,
     loading: data,
@@ -15,7 +14,6 @@ const getUpcoming = (data) => {
 
 // Function untuk ambil film
 export const getUpcomingAction = () => {
-  console.log(getUpcomingAction);
   //   Get Data film API dengan axios
   return async (dispatch) => {
     const ambilFilm = await axios.get(
@@ -23,6 +21,6 @@ export const getUpcomingAction = () => {
     );
     // Pengiriman data function constanta dan dari data dari axios
     dispatch(getUpcoming(ambilFilm.data));
-    console.log("Ini data film ", ambilFilm);
+    console.log("Ini data film di action", ambilFilm);
   };
 };
