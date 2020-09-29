@@ -3,7 +3,6 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // Import Components
 import Header from "./Components/Header";
-import MovieNowPlaying from "./Components/MovieNowPlaying";
 import Upcoming from "./Components/Upcoming";
 import Home from "./Components/Home";
 
@@ -15,9 +14,6 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Home />
-          </Route>
-          <Route path="/nowplaying">
-            <MovieNowPlaying />
           </Route>
           <Route path="/upcoming">
             <Upcoming />

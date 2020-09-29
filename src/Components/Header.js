@@ -11,9 +11,6 @@ function Header() {
         <li>
           <Link to="/upcoming">Upcoming</Link>
         </li>
-        <li>
-          <Link to="nowplaying">Now Playing</Link>
-        </li>
       </ul>
     </div>
   );

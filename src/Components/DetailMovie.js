@@ -1,3 +1,4 @@
+// import useEffect
 import React from "react";
 
 function DetailMovie() {

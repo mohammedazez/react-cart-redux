@@ -3,8 +3,8 @@ import { createStore, applyMiddleware } from "redux";
 // Import redux thunk
 import thunk from "redux-thunk";
 
-// Import Upcoming movie reducers
-import Upcoming from "./reducers/Upcoming.reducers";
+// Import reducers
+import rootReducers from "./reducers";
 
-const store = createStore(Upcoming, applyMiddleware(thunk));
+const store = createStore(rootReducers, applyMiddleware(thunk));
 export default store;
