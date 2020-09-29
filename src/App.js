@@ -16,10 +16,10 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/upcoming">
+          <Route path="/nowplaying">
             <MovieNowPlaying />
           </Route>
-          <Route path="/nowplaying">
+          <Route path="/upcoming">
             <Upcoming />
           </Route>
         </Switch>
