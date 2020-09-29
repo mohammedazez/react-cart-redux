@@ -8,7 +8,7 @@ import { getUpcomingAction } from "../Redux/action/Upcoming.action";
 function Upcoming() {
   // Gunakan useDispatch untuk
   const pengiriman = useDispatch();
-  // Gunakan useSelector untuk
+  // Gunakan useSelector untuk mengambil data film dari action
   const daftarFilm = useSelector((state) => state.data);
   console.log("Ini daftar film di view", daftarFilm);
   // Gunakan useEffect untuk
@@ -20,7 +20,14 @@ function Upcoming() {
     <div>
       <h1>Upcoming Movie</h1>
       {/* Tampilkan semua data film ke website supaya bisa dilihat user menggunakan Map (array method) */}
-      <div className="daftar-film"></div>
+      {/* <div className="daftar-film"> */}
+      {/* pakai useSelector */}
+      {/* {daftarFilm.map((item, index) => (
+          <div>
+            <h1>test</h1>
+          </div>
+        ))}
+      </div> */}
     </div>
   );
 }

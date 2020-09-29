@@ -17,7 +17,7 @@ export const getUpcomingAction = () => {
   //   Get Data film API dengan axios
   return async (dispatch) => {
     const ambilFilm = await axios.get(
-      "https://api.themoviedb.org/3/movie/upcoming?api_key=4ff887f7912cc8621c53af345daac0cd"
+      `https://api.themoviedb.org/3/movie/upcoming?api_key=4ff887f7912cc8621c53af345daac0cd`
     );
     // Pengiriman data function constanta dan dari data dari axios
     dispatch(getUpcoming(ambilFilm.data));
