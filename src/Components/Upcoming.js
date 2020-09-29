@@ -19,14 +19,17 @@ function Upcoming() {
   return (
     <div>
       <h1>Upcoming Movie</h1>
-      {/* Tampilkan semua data film ke website supaya bisa dilihat user menggunakan Map (array method) */}
-      {/* <div className="daftar-film"> */}
-      {/* pakai useSelector */}
-      {/* {daftarFilm.map((item, index) => (
-          <div>
-            <h1>test</h1>
-          </div>
-        ))}
+      {/* Tampilkan semua data film ke website supaya bisa dilihat user menggunakan Map (array method) gunakan dari useSelector*/}
+      {/* <div className="daftar-film">
+        {daftarFilm !== undefined ? (
+          daftarFilm.map((item, index) => (
+            <div key={index}>
+              <h1>{item.results}</h1>
+            </div>
+          ))
+        ) : (
+          <h1>Loading</h1>
+        )}
       </div> */}
     </div>
   );
