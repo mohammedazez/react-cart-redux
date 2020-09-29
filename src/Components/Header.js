@@ -11,6 +11,9 @@ function Header() {
         <li>
           <Link to="/upcoming">Upcoming</Link>
         </li>
+        <li>
+          <Link to="/detail">Detail Movie</Link>
+        </li>
       </ul>
     </div>
   );

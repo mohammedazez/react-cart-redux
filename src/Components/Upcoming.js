@@ -12,7 +12,9 @@ function Upcoming() {
   // Gunakan useDispatch untuk
   const pengiriman = useDispatch();
   // Gunakan useSelector untuk mengambil data film dari action
-  const daftarFilm = useSelector((state) => state.geUpcomingReducers);
+  const daftarFilm = useSelector(
+    (state) => state.getUpcomingReducers.data.results
+  );
   console.log("Ini daftar film di view", daftarFilm);
   // Gunakan useHistory yang digunakan push halaman ke detail movie
   const pindah = useHistory();
@@ -32,12 +34,12 @@ function Upcoming() {
       <h1>Upcoming Movie</h1>
       {/* Tampilkan semua data film ke website supaya bisa dilihat user menggunakan Map (array method) gunakan dari useSelector*/}
       <div className="daftar-film">
-        {daftarFilm && daftarFilm.results ? (
-          daftarFilm.results.map((item, index) => (
+        {daftarFilm !== undefined ? (
+          daftarFilm.map((item, index) => (
             <div key={index}>
               <div className="card">
                 <img
-                  src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
+                  src={`https://image.tmdb.org/t/p/w200${item.poster_path}`}
                   alt="poster"
                   onClick={() => handleClick(item.id)}
                 />

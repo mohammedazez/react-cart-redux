@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./Components/Header";
 import Upcoming from "./Components/Upcoming";
 import Home from "./Components/Home";
+import DetailMovie from "./Components/DetailMovie";
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
           </Route>
           <Route path="/upcoming">
             <Upcoming />
+          </Route>
+          <Route path="/detail">
+            <DetailMovie />
           </Route>
         </Switch>
       </div>

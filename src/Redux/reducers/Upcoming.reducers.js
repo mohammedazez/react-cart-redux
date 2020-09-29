@@ -13,7 +13,7 @@ const initialState = {
   isLoading: false,
 };
 
-export const geUpcomingReducers = (state = initialState, action) => {
+export const getUpcomingReducers = (state = initialState, action) => {
   // Gunakana Switch case
   switch (action.type) {
     // case BEFORE_FATCH:

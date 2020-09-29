@@ -1,10 +1,13 @@
 // import combine reducers
 import { combineReducers } from "redux";
 // import detail movie reducers
-import { geUpcomingReducers } from "../reducers/Upcoming.reducers";
+import { getUpcomingReducers } from "../reducers/Upcoming.reducers";
 // import upcoming movie reducers
-// import { detailMovie } from "../reducers/detailMovie.reducers";
+import { getDetailReducers } from "../reducers/detailMovie.reducers";
 
-const rootReducers = combineReducers({ geUpcomingReducers });
+const rootReducers = combineReducers({
+  getUpcomingReducers,
+  getDetailReducers,
+});
 
 export default rootReducers;

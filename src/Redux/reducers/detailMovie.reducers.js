@@ -1,18 +1,39 @@
-// import action
-import { GET_DETAIL_MOVIE } from "../action/detailMovie.action";
+// Import action
+import {
+  GET_DETAIL_REQUEST,
+  GET_DETAIL_SUCCESS,
+  GET_DETAIL_FAILED,
+  //   BEFORE_FATCH,
+} from "../action/detailMovie.action";
 
-// Tandai dengan initial State
+// Tandai dengan initial state
 const initialState = {
   data: [],
+  error: null,
+  isLoading: false,
 };
 
-export default (state = initialState, action) => {
-  //Gunakan Switch Case
+export const getDetailReducers = (state = initialState, action) => {
+  // Gunakana Switch case
   switch (action.type) {
-    case GET_DETAIL_MOVIE:
+    // case BEFORE_FATCH:
+    //   return state;
+    case GET_DETAIL_REQUEST:
       return {
         ...state,
-        data: action.loading,
+        isLoading: true,
+      };
+    case GET_DETAIL_SUCCESS:
+      return {
+        ...state,
+        isLoading: false,
+        data: action.result,
+      };
+    case GET_DETAIL_FAILED:
+      return {
+        ...state,
+        data: action.error,
+        isLoading: false,
       };
     default:
       return state;
