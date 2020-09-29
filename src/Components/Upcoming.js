@@ -5,20 +5,20 @@ import { useSelector, useDispatch } from "react-redux";
 // Import useHistory React Router Dom
 import { useHistory } from "react-router-dom";
 // Import action dari Function untuk ambil data film
-import { getUpcomingAction } from "../Redux/action/Upcoming.action";
+import { getUpcoming } from "../Redux/action/Upcoming.action";
 import "./upcoming.css";
 
 function Upcoming() {
   // Gunakan useDispatch untuk
   const pengiriman = useDispatch();
   // Gunakan useSelector untuk mengambil data film dari action
-  const daftarFilm = useSelector((state) => state.data);
+  const daftarFilm = useSelector((state) => state.geUpcomingReducers);
   console.log("Ini daftar film di view", daftarFilm);
   // Gunakan useHistory yang digunakan push halaman ke detail movie
   const pindah = useHistory();
   // Gunakan useEffect untuk
   useEffect(() => {
-    pengiriman(getUpcomingAction());
+    pengiriman(getUpcoming());
   }, [pengiriman]);
 
   // Fungsi tombol untuk memunculkan detail film
