@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 // Import useSelector dan useDispatch
 import { useSelector, useDispatch } from "react-redux";
-// Import useHistory React Router Dom
+// Import useHistory React Router Dom untuk pindah halaman
 import { useHistory } from "react-router-dom";
 // Import action dari Function untuk ambil data film
 import { getUpcoming } from "../Redux/action/Upcoming.action";
@@ -25,8 +25,9 @@ function Upcoming() {
 
   // Fungsi tombol untuk memunculkan detail film
   const handleClick = (id) => {
-    alert("tombol berfungsi");
-    pindah.push();
+    console.log("tombol berfungsi");
+    // Diambil dari path app js
+    pindah.push(`/detail/${id}`);
   };
 
   return (

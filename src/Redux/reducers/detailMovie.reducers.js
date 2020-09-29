@@ -3,7 +3,6 @@ import {
   GET_DETAIL_REQUEST,
   GET_DETAIL_SUCCESS,
   GET_DETAIL_FAILED,
-  //   BEFORE_FATCH,
 } from "../action/detailMovie.action";
 
 // Tandai dengan initial state
@@ -14,10 +13,8 @@ const initialState = {
 };
 
 export const getDetailReducers = (state = initialState, action) => {
-  // Gunakana Switch case
+  // Gunakan Switch case
   switch (action.type) {
-    // case BEFORE_FATCH:
-    //   return state;
     case GET_DETAIL_REQUEST:
       return {
         ...state,
@@ -33,7 +30,6 @@ export const getDetailReducers = (state = initialState, action) => {
       return {
         ...state,
         data: action.error,
-        isLoading: false,
       };
     default:
       return state;
