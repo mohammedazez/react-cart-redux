@@ -1,7 +1,7 @@
 // Import action
 import { GET_UPCOMING_MOVIE } from "../action/Upcoming.action";
 
-// TAndai dengan initial state
+// Tandai dengan initial state
 const initialState = [];
 
 export default (state = initialState, action) => {
