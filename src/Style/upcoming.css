@@ -11,3 +11,12 @@
 .container {
   padding: 2px 16px;
 }
+
+.container-utama {
+  padding: 100px;
+}
+
+.judul {
+  padding-top: 40px;
+  text-align: center;
+}

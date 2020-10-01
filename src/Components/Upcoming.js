@@ -6,7 +6,9 @@ import { useSelector, useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 // Import action dari Function untuk ambil data film
 import { getUpcoming } from "../Redux/action/Upcoming.action";
-import "./upcoming.css";
+// Import react bootstrap
+import { Card, CardDeck } from "react-bootstrap";
+import "../Style/upcoming.css";
 
 function Upcoming() {
   // Gunakan useDispatch untuk
@@ -32,13 +34,66 @@ function Upcoming() {
 
   return (
     <div>
-      <h1>Upcoming Movie</h1>
+      <h1 className="judul">Upcoming Movie</h1>
       {/* Tampilkan semua data film ke website supaya bisa dilihat user menggunakan Map (array method) gunakan dari useSelector*/}
       <div className="daftar-film">
         {daftarFilm !== undefined ? (
           daftarFilm.map((item, index) => (
             <div key={index}>
-              <div className="card">
+              <CardDeck className="container-utama">
+                <Card>
+                  <Card.Img
+                    variant="top"
+                    src={`https://image.tmdb.org/t/p/w200${item.poster_path}`}
+                    alt="poster"
+                    onClick={() => handleClick(item.id)}
+                  />
+                  <Card.Body>
+                    <Card.Title>{item.title}</Card.Title>
+                    <Card.Text>{item.overview}</Card.Text>
+                  </Card.Body>
+                  <Card.Footer>
+                    <small className="text-muted">
+                      Rilis : {item.release_date}
+                    </small>
+                  </Card.Footer>
+                </Card>
+                <Card>
+                  <Card.Img
+                    variant="top"
+                    src={`https://image.tmdb.org/t/p/w200${item.poster_path}`}
+                    alt="poster"
+                    onClick={() => handleClick(item.id)}
+                  />
+                  <Card.Body>
+                    <Card.Title>{item.title}</Card.Title>
+                    <Card.Text>{item.overview}</Card.Text>
+                  </Card.Body>
+                  <Card.Footer>
+                    <small className="text-muted">
+                      Rilis : {item.release_date}
+                    </small>
+                  </Card.Footer>
+                </Card>
+                <Card>
+                  <Card.Img
+                    variant="top"
+                    src={`https://image.tmdb.org/t/p/w200${item.poster_path}`}
+                    alt="poster"
+                    onClick={() => handleClick(item.id)}
+                  />
+                  <Card.Body>
+                    <Card.Title>{item.title}</Card.Title>
+                    <Card.Text>{item.overview}</Card.Text>
+                  </Card.Body>
+                  <Card.Footer>
+                    <small className="text-muted">
+                      Rilis : {item.release_date}
+                    </small>
+                  </Card.Footer>
+                </Card>
+              </CardDeck>
+              {/* <div className="card">
                 <img
                   src={`https://image.tmdb.org/t/p/w200${item.poster_path}`}
                   alt="poster"
@@ -49,7 +104,7 @@ function Upcoming() {
                     <b>{item.title}</b>
                   </h4>
                 </div>
-              </div>
+              </div> */}
             </div>
           ))
         ) : (
