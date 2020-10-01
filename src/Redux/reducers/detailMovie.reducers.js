@@ -7,7 +7,7 @@ import {
 
 // Tandai dengan initial state
 const initialState = {
-  data: [],
+  DetailMovie: {},
   error: null,
   isLoading: false,
 };
@@ -18,7 +18,7 @@ export const getDetailReducers = (state = initialState, action) => {
     case GET_DETAIL_REQUEST:
       return {
         ...state,
-        isLoading: true,
+        data: action.playload,
       };
     case GET_DETAIL_SUCCESS:
       return {

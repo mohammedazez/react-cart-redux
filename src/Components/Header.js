@@ -19,6 +19,7 @@ function Header() {
           <img
             src={require("../Assets/warflix.png")}
             style={{ height: "50px", width: "50px" }}
+            alt="logo"
           />
           <strong className="white-text">Warflix</strong>
         </MDBNavbarBrand>
