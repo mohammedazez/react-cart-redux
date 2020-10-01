@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // Import Components
 import Header from "./Components/Header";
 import Upcoming from "./Components/Upcoming";
+import NowPlaying from "./Components/NowPlaying";
 import Home from "./Components/Home";
 import DetailMovie from "./Components/DetailMovie";
 
@@ -18,6 +19,9 @@ function App() {
           </Route>
           <Route path="/upcoming">
             <Upcoming />
+          </Route>
+          <Route path="/nowplaying">
+            <NowPlaying />
           </Route>
           <Route path="/detail">
             <DetailMovie />

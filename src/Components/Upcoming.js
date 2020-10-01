@@ -61,7 +61,7 @@ function Upcoming() {
                 <Card>
                   <Card.Img
                     variant="top"
-                    src={`https://image.tmdb.org/t/p/w200${item.poster_path}`}
+                    src={`https://image.tmdb.org/t/p/w200${item.backdrop_path}`}
                     alt="poster"
                     onClick={() => handleClick(item.id)}
                   />

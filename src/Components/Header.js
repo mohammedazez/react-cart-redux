@@ -32,7 +32,7 @@ function Header() {
               <MDBNavLink to="/upcoming">Upcoming</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
-              <MDBNavLink to="#!">Now Playing</MDBNavLink>
+              <MDBNavLink to="/nowplaying">Now Playing</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
               <MDBNavLink to="/detail">Detail Movie</MDBNavLink>
